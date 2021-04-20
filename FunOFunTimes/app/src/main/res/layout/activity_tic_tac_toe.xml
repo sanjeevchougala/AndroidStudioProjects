@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ticTacToeConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TicTacToe">
+
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="95dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:shadowColor="@color/black"
+        android:text="@string/home"
+        android:textSize="12sp"
+        app:backgroundTint="#3F51B5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ticTacToeHeadertextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/tic_tac_toe"
+        android:textColor="#9C27B0"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/player1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/player_1"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeButton" />
+
+    <EditText
+        android:id="@+id/player1Name"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:hint="@string/player_1_name"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/player1"
+        app:layout_constraintStart_toEndOf="@+id/player1"
+        app:layout_constraintTop_toTopOf="@+id/player1" />
+
+    <EditText
+        android:id="@+id/player1Symbol"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/apple"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/player1Name"
+        app:layout_constraintStart_toEndOf="@+id/player1Name"
+        app:layout_constraintTop_toTopOf="@+id/player1Name" />
+
+    <TextView
+        android:id="@+id/player2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/player_2"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/player1" />
+
+    <EditText
+        android:id="@+id/player2Name"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:hint="@string/player_2_name"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/player2"
+        app:layout_constraintStart_toEndOf="@+id/player2"
+        app:layout_constraintTop_toTopOf="@+id/player2" />
+
+    <EditText
+        android:id="@+id/player2Symbol"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/pear"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/player2Name"
+        app:layout_constraintStart_toEndOf="@id/player2Name"
+        app:layout_constraintTop_toTopOf="@+id/player2Name" />
+
+    <Button
+        android:id="@+id/startGameButton"
+        android:layout_width="271dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/start"
+        app:backgroundTint="#8BC34A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player2Name" />
+
+    <TableLayout
+        android:id="@+id/ticTacToeTableLayout"
+        android:layout_width="314dp"
+        android:layout_height="414dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="24dp"
+        android:divider="@color/red"
+        android:showDividers="middle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:divider="@color/red"
+            android:gravity="bottom"
+            android:showDividers="middle">
+
+            <Button
+                android:id="@+id/oneButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="@string/_1tictactoebtn"
+                android:text="@string/_1tictactoebtn"
+                android:textSize="30sp"
+                app:backgroundTint="#FFC107" />
+
+            <Button
+                android:id="@+id/twoButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="@string/_2tictactoebtn"
+                android:text="@string/_2tictactoebtn"
+                android:textSize="30sp"
+                app:backgroundTint="#E91E63" />
+
+            <Button
+                android:id="@+id/threeButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="@string/_3tictactoebtn"
+                android:text="@string/_3tictactoebtn"
+                android:textSize="30sp"
+                app:backgroundTint="#00BCD4" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:divider="@color/red"
+            android:showDividers="middle">
+
+            <Button
+                android:id="@+id/fourButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="@string/_4tictactoebtn"
+                android:text="@string/_4tictactoebtn"
+                android:textSize="30sp"
+                app:backgroundTint="#00BCD4" />
+
+            <Button
+                android:id="@+id/fiveButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="@string/_5tictactoebtn"
+                android:text="@string/_5tictactoebtn"
+                android:textSize="30sp"
+                app:backgroundTint="#FF5722" />
+
+            <Button
+                android:id="@+id/sixButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="@string/_6tictactoebtn"
+                android:text="@string/_6tictactoebtn"
+                android:textSize="30sp"
+                app:backgroundTint="#673AB7" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:divider="@color/red"
+            android:showDividers="middle">
+
+            <Button
+                android:id="@+id/sevenButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="@string/_7tictactoebtn"
+                android:text="@string/_7tictactoebtn"
+                android:textSize="30sp"
+                app:backgroundTint="#E91E63" />
+
+            <Button
+                android:id="@+id/eightButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="@string/_8tictactoebtn"
+                android:text="@string/_8tictactoebtn"
+                android:textSize="30sp"
+                app:backgroundTint="#3F51B5" />
+
+            <Button
+                android:id="@+id/nineButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="@string/_9tictactoebtn"
+                android:text="@string/_9tictactoebtn"
+                android:textSize="30sp"
+                app:backgroundTint="#00BCD4" />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/playAgainButton"
+        android:layout_width="271dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/play_again"
+        android:visibility="invisible"
+        app:backgroundTint="#8BC34A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

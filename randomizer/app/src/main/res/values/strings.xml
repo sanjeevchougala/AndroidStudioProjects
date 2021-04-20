@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Counter</string>
+    <string name="_0">0</string>
+    <string name="_1">+1</string>
+    <string name="_2">+2</string>
+    <string name="_3">+3</string>
+    <string name="_4">+4</string>
+    <string name="_5">+5</string>
+    <string name="_6">+6</string>
+    <string name="_7">+7</string>
+    <string name="_9">+9</string>
+    <string name="_8">+8</string>
+    <string name="_10">+10</string>
+    <string name="minus1">-1</string>
+    <string name="minus2">-2</string>
+    <string name="minus3">-3</string>
+    <string name="minus4">-4</string>
+    <string name="minus5">-5</string>
+    <string name="minus6">-6</string>
+    <string name="minus7">-7</string>
+    <string name="minus8">-8</string>
+    <string name="minus9">-9</string>
+    <string name="minus10">-10</string>
+    <string name="_100">+100</string>
+    <string name="_1000">+1000</string>
+    <string name="reset">RESET</string>
+    <string name="_m100">-100</string>
+    <string name="_m1000">-1000</string>
+    <string name="sub">Sub</string>
+    <string name="plus">Add</string>
+</resources>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Tip Calc</string>
+    <string name="welcome">Welcome</string>
+    <string name="greet">Greet!</string>
+    <string name="hello">Hello</string>
+    <string name="bill">Bill</string>
+    <string name="billText">Bill:</string>
+    <string name="tip_percentage">Tip Percentage</string>
+    <string name="tip_34_55_total_134_55">Tip: $34.55 Total: 134.55</string>
+    <string name="final_amout">final amout</string>
+    <string name="percentage">percentage</string>
+    <string name="calculate">Calculate</string>
+    <string name="_35_68">35.68</string>
+    <string name="_12">12</string>
+</resources>
