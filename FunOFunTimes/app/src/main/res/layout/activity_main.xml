@@ -72,6 +72,20 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/multiplication_table"
                 app:backgroundTint="#4CAF50" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/playAtoZButton"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/a_to_z"
+                app:backgroundTint="#FF5722" />
         </TableRow>
 
         <TableRow

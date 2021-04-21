@@ -37,6 +37,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        findViewById<Button>(R.id.playAtoZButton).setOnClickListener() {
+            val intent = Intent(this, AlphabetsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 //    override fun onResume() {
