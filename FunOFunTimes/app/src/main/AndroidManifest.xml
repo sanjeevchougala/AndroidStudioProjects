@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FunOFunTimes">
-        <activity android:name=".AlphabetsActivity"></activity>
+        <activity android:name=".AlphabetsActivity" />
         <activity android:name=".NumMultiplicationTableActivity" />
         <activity android:name=".MultiplicationTableActivity" />
         <activity android:name=".TicTacToe" />

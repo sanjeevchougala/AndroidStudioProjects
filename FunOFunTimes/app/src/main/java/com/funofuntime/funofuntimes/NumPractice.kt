@@ -21,7 +21,7 @@ class NumPractice : AppCompatActivity() {
             resultsTextView.text = rand.toString()
         }
 
-        findViewById<Button>(R.id.homeButton1).setOnClickListener{
+        findViewById<Button>(R.id.homeButton).setOnClickListener{
             finish()
         }
     }

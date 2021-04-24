@@ -6,29 +6,26 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class IconAdapter (val buttons : ArrayList<String>, val cellId : String) :
+class IconAdapter(val icons: ArrayList<Icon>) :
         RecyclerView.Adapter<IconAdapter.IconHolder>() {
 
     class IconHolder(v: View) : RecyclerView.ViewHolder(v), View.OnClickListener {
         var view: View = v
-        var icon: String = ""
+        lateinit var icon: Icon
 
         init {
             v.setOnClickListener(this)
         }
 
-        fun bindltr(ltr: String, cellId: String) {
-            this.icon = ltr
-            view.findViewById<TextView>(R.id.lconTextView).text = ltr
-            view.findViewById<TextView>(R.id.lconTextView).tag = cellId
+        fun bindIcon(icon: Icon) {
+            this.icon = icon
+            view.findViewById<TextView>(R.id.lconTextView).text = icon.icon
         }
 
         override fun onClick(v: View?) {
-//            val focusIntent = Intent(view.context, NumMultiplicationTableActivity::class.java)
-//            focusIntent.putExtra("letter", ltr)
-//            ContextCompat.startActivity(view.context, focusIntent, null)
-//            view.findViewById<TextView>(R.id.alphaTextView).text = ltr
-        }
+                (view.context as GameActivity).updateBoard(icon, adapterPosition)
+            }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IconHolder {
@@ -39,12 +36,11 @@ class IconAdapter (val buttons : ArrayList<String>, val cellId : String) :
     }
 
     override fun getItemCount(): Int {
-        return buttons.count()
+        return icons.count()
     }
 
     override fun onBindViewHolder(holder: IconHolder, position: Int) {
-        val icon = buttons[position]
-        holder.bindltr(icon, cellId)
+        val icon = icons[position]
+        holder.bindIcon(icon)
     }
-
 }

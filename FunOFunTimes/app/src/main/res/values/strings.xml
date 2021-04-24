@@ -69,10 +69,10 @@
     <string name="multiplication_table">Multiplication Table</string>
     <string name="numtextview">NumTextView</string>
     <string name="back_to_table">Back To Table</string>
-    <string name="a_to_z">A to Z</string>
-    <string name="a_z_and_a_z">A-Z and a-z</string>
+    <string name="a_z_and_a_z">Aa-Zz</string>
     <string name="a_z">a-z</string>
     <string name="upper_a_z">A-Z</string>
     <string name="a">A</string>
     <string name="next_letter">Next Letter</string>
+    <string name="back">back</string>
 </resources>

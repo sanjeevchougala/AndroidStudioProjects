@@ -1,8 +1,9 @@
 package com.funofuntime.chowkabara
 
-class Player(var name : String, var btnIcon : String) {
+class Player(var id : Int, var name : String, var btnIcon : String) {
     var hasPasstoInnerLoop : Boolean = false
     var playing : Boolean = false
+    var icons: ArrayList<Icon> = arrayListOf()
 
     fun setHasPasstoInnerLoopTrue(){
         hasPasstoInnerLoop = true
@@ -13,10 +14,10 @@ class Player(var name : String, var btnIcon : String) {
     }
 
     fun setPlayingTrue(){
-        hasPasstoInnerLoop = true
+        playing = true
     }
 
     fun setPlayingFalse(){
-        hasPasstoInnerLoop = false
+        playing = false
     }
 }

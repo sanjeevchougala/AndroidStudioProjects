@@ -5,14 +5,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.GridLayoutManager
 
 class AddSub : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_addsub)
 
-    val resetButton = findViewById<Button>(R.id.resetButton)
+    val resetButton = findViewById<Button>(R.id.RESET)
 
     val plusOne = findViewById<Button>(R.id.plus1)
     val plusTwo = findViewById<Button>(R.id.plus2)
