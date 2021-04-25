@@ -22,7 +22,7 @@
         android:id="@+id/resultText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:textColor="#FF5722"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="@id/divider2"
@@ -34,7 +34,7 @@
         android:id="@+id/divider2"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="120dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,7 +52,7 @@
         android:id="@+id/numTable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +70,7 @@
                 <Button
                     android:id="@+id/plus1"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="1"
                     android:text="@string/_1"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -82,7 +82,7 @@
                 <Button
                     android:id="@+id/plus2"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="2"
                     android:text="@string/_2"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -94,7 +94,7 @@
                 <Button
                     android:id="@+id/plus3"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="3"
                     android:text="@string/_3"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -106,7 +106,7 @@
                 <Button
                     android:id="@+id/plus4"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="4"
                     android:text="@string/_4"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -118,7 +118,7 @@
                 <Button
                     android:id="@+id/plus5"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="5"
                     android:text="@string/_5"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -137,7 +137,7 @@
                 <Button
                     android:id="@+id/plus6"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="6"
                     android:text="@string/_6"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -149,7 +149,7 @@
                 <Button
                     android:id="@+id/plus7"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="7"
                     android:text="@string/_7"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -161,7 +161,7 @@
                 <Button
                     android:id="@+id/plus8"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="8"
                     android:text="@string/_8"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -173,7 +173,7 @@
                 <Button
                     android:id="@+id/plus9"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="9"
                     android:text="@string/_9"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -185,11 +185,11 @@
                 <Button
                     android:id="@+id/plus10"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="10"
                     android:text="@string/_10"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     app:backgroundTint="#8BC34A"
                     app:backgroundTintMode="add" />
@@ -203,7 +203,7 @@
                 <Button
                     android:id="@+id/minus1"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="-1"
                     android:text="@string/minus1"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -215,7 +215,7 @@
                 <Button
                     android:id="@+id/minus2"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="-2"
                     android:text="@string/minus2"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -227,7 +227,7 @@
                 <Button
                     android:id="@+id/minus3"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="-3"
                     android:text="@string/minus3"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -239,7 +239,7 @@
                 <Button
                     android:id="@+id/minus4"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="-4"
                     android:text="@string/minus4"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -251,7 +251,7 @@
                 <Button
                     android:id="@+id/minus5"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="-5"
                     android:text="@string/minus5"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -270,7 +270,7 @@
                 <Button
                     android:id="@+id/minus9"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="-9"
                     android:text="@string/minus9"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -282,7 +282,7 @@
                 <Button
                     android:id="@+id/minus6"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="-6"
                     android:text="@string/minus6"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -294,7 +294,7 @@
                 <Button
                     android:id="@+id/minus8"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="-8"
                     android:text="@string/minus8"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -306,7 +306,7 @@
                 <Button
                     android:id="@+id/minus7"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="-7"
                     android:text="@string/minus7"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -318,11 +318,11 @@
                 <Button
                     android:id="@+id/minus10"
                     android:layout_width="60dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:tag="-10"
                     android:text="@string/minus10"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     app:backgroundTint="#F44336"
                     app:backgroundTintMode="add" />
@@ -334,7 +334,7 @@
         android:id="@+id/divider3"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintTop_toBottomOf="@+id/numTable" />
 
@@ -375,7 +375,7 @@
         android:id="@+id/minus100"
         android:layout_width="80dp"
         android:layout_height="40dp"
-        android:layout_marginStart="42dp"
+        android:layout_marginStart="8dp"
 
         android:layout_weight="1"
         android:tag="-100"
@@ -416,6 +416,7 @@
         android:importantForAutofill="no"
         android:inputType="number"
         android:text="@string/L100"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/plus100" />
 
@@ -426,6 +427,7 @@
         android:layout_marginStart="8dp"
         android:layout_weight="1"
         android:text="@string/sub"
+        android:textSize="12sp"
         app:backgroundTint="#F44336"
         app:layout_constraintBottom_toBottomOf="@+id/addButton"
         app:layout_constraintStart_toEndOf="@+id/addButton" />
@@ -437,6 +439,7 @@
         android:layout_marginStart="18dp"
         android:layout_weight="1"
         android:text="@string/plus"
+        android:textSize="12sp"
         app:backgroundTint="#4CAF50"
         app:layout_constraintBottom_toBottomOf="@+id/NumEditTextNumber"
         app:layout_constraintStart_toEndOf="@+id/NumEditTextNumber" />

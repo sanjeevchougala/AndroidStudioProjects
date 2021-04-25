@@ -29,6 +29,11 @@ class TicTacToe : AppCompatActivity() {
             if(checkplayers()) {
                 findViewById<TableLayout>(R.id.ticTacToeTableLayout).visibility = View.VISIBLE
                 findViewById<Button>(R.id.startGameButton).visibility = View.INVISIBLE
+                findViewById<TextView>(R.id.ticTacToeHeadertextView).text = "Now " + findViewById<TextView>(R.id.player1Name).text.toString() + "'s Turn"
+                findViewById<TextView>(R.id.player1Name).isEnabled = false
+                findViewById<TextView>(R.id.player2Name).isEnabled = false
+                findViewById<TextView>(R.id.player1Symbol).isEnabled = false
+                findViewById<TextView>(R.id.player2Symbol).isEnabled = false
             }
         }
 
@@ -36,6 +41,11 @@ class TicTacToe : AppCompatActivity() {
             setTheBoard()
             findViewById<Button>(R.id.startGameButton).visibility = View.VISIBLE
             findViewById<Button>(R.id.playAgainButton).visibility = View.INVISIBLE
+            findViewById<TextView>(R.id.ticTacToeHeadertextView).text = "Tic Tac Toe"
+            findViewById<TextView>(R.id.player1Name).isEnabled = true
+            findViewById<TextView>(R.id.player2Name).isEnabled = true
+            findViewById<TextView>(R.id.player1Symbol).isEnabled = true
+            findViewById<TextView>(R.id.player2Symbol).isEnabled = true
         }
 
         findViewById<Button>(R.id.oneButton).setOnClickListener{
@@ -69,9 +79,6 @@ class TicTacToe : AppCompatActivity() {
 
     fun isGame() : String {
         if(ticTacToeArray[1] == ticTacToeArray[2] &&  ticTacToeArray[1]==ticTacToeArray[3]){
-//            findViewById<Button>(R.id.oneButton).setBackgroundColor(1)
-//            findViewById<Button>(R.id.twoButton).setBackgroundColor(1)
-//            findViewById<Button>(R.id.threeButton).setBackgroundColor(1)
             return ticTacToeArray[1]
         }
 
@@ -110,8 +117,11 @@ class TicTacToe : AppCompatActivity() {
         var btnid = btn.tag.toString().toInt()
         if(counter%2==0) {
             btn.text = player2Symbol
+            findViewById<TextView>(R.id.ticTacToeHeadertextView).text = "Now " + findViewById<TextView>(R.id.player1Name).text.toString() + "'s Turn"
         }  else {
             btn.text = player1Symbol
+            findViewById<TextView>(R.id.ticTacToeHeadertextView).text =  "Now " + findViewById<TextView>(R.id.player2Name).text.toString() + "'s Turn"
+
         }
         ticTacToeArray[btnid] = btn.text.toString()
 
@@ -122,17 +132,20 @@ class TicTacToe : AppCompatActivity() {
             if(isItGame == player1Symbol){
                 alertPopUp("WELL DONE",findViewById<TextView>(R.id.player1Name).text.toString() + " you WON!!")
                 findViewById<Button>(R.id.playAgainButton).visibility = View.VISIBLE
+                findViewById<TextView>(R.id.ticTacToeHeadertextView).text = findViewById<TextView>(R.id.player1Name).text.toString()  + " WON!"
                 updateAsGameOver()
             }
             if(isItGame == player2Symbol){
                 alertPopUp("WELL DONE",findViewById<TextView>(R.id.player2Name).text.toString() + " you WON!!")
                 findViewById<Button>(R.id.playAgainButton).visibility = View.VISIBLE
+                findViewById<TextView>(R.id.ticTacToeHeadertextView).text = findViewById<TextView>(R.id.player2Name).text.toString()  + " WON!"
                 updateAsGameOver()
             }
             if(counter == 10 && isItGame == "" ){
                 updateAsGameOver()
                 alertPopUp("Info"," No One won the Game...")
                 findViewById<Button>(R.id.playAgainButton).visibility = View.VISIBLE
+                findViewById<TextView>(R.id.ticTacToeHeadertextView).text = "Tic Tac Toe"
             }
         }
     }

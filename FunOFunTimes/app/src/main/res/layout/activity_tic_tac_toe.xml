@@ -28,7 +28,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/tic_tac_toe"
         android:textColor="#9C27B0"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/homeButton"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,6 +36,7 @@
         android:id="@+id/playerSetUp"
         android:layout_width="346dp"
         android:layout_height="79dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
