@@ -56,13 +56,38 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/lowerAZButton" />
 
+    <Button
+        android:id="@+id/getLetterButton"
+        android:layout_width="93dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/next_letter"
+        android:textSize="12sp"
+        app:backgroundTint="#9C27B0"
+        app:layout_constraintStart_toStartOf="@id/homeButton"
+        app:layout_constraintTop_toBottomOf="@id/homeButton"
+        tools:layout_constraintStart_toStartOf="@id/homeButton" />
+
+    <TextView
+        android:id="@+id/alphaTextView"
+        android:layout_width="200dp"
+        android:layout_height="160dp"
+        android:gravity="center"
+        android:text="@string/a"
+        android:textColor="#2196F3"
+        android:textSize="110sp"
+        app:layout_constraintStart_toEndOf="@id/getLetterButton"
+        app:layout_constraintTop_toBottomOf="@id/homeButton" />
+
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/homeButton">
+        app:layout_constraintTop_toBottomOf="@id/alphaTextView">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -72,27 +97,9 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/alphabetRecyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp">
+                android:layout_height="wrap_content">
 
             </androidx.recyclerview.widget.RecyclerView>
-
-            <Button
-                android:id="@+id/getLetterButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:text="@string/next_letter"
-                app:backgroundTint="#9C27B0" />
-
-            <TextView
-                android:id="@+id/alphaTextView"
-                android:layout_width="200dp"
-                android:layout_height="160dp"
-                android:gravity="center"
-                android:text="@string/a"
-                android:textColor="#2196F3"
-                android:textSize="110sp" />
 
         </LinearLayout>
     </ScrollView>

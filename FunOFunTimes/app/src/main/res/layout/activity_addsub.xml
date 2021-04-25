@@ -268,11 +268,11 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/minus9"
+                    android:id="@+id/minus6"
                     android:layout_width="60dp"
                     android:layout_height="45dp"
-                    android:tag="-9"
-                    android:text="@string/minus9"
+                    android:tag="-6"
+                    android:text="@string/minus6"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textSize="14sp"
                     android:textStyle="bold"
@@ -280,11 +280,11 @@
                     app:backgroundTintMode="add" />
 
                 <Button
-                    android:id="@+id/minus6"
+                    android:id="@+id/minus7"
                     android:layout_width="60dp"
                     android:layout_height="45dp"
-                    android:tag="-6"
-                    android:text="@string/minus6"
+                    android:tag="-7"
+                    android:text="@string/minus7"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textSize="14sp"
                     android:textStyle="bold"
@@ -304,11 +304,11 @@
                     app:backgroundTintMode="add" />
 
                 <Button
-                    android:id="@+id/minus7"
+                    android:id="@+id/minus9"
                     android:layout_width="60dp"
                     android:layout_height="45dp"
-                    android:tag="-7"
-                    android:text="@string/minus7"
+                    android:tag="-9"
+                    android:text="@string/minus9"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textSize="14sp"
                     android:textStyle="bold"
@@ -340,15 +340,15 @@
 
     <Button
         android:id="@+id/plus100"
-        android:layout_width="80dp"
+        android:layout_width="70dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_weight="1"
         android:tag="100"
         android:text="@string/_100"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="14sp"
+        android:textSize="12sp"
         android:textStyle="bold"
         app:backgroundTint="#8BC34A"
         app:backgroundTintMode="add"
@@ -357,14 +357,14 @@
 
     <Button
         android:id="@+id/plus1000"
-        android:layout_width="80dp"
+        android:layout_width="90dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_weight="1"
         android:tag="1000"
         android:text="@string/_1000"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="14sp"
+        android:textSize="12sp"
         android:textStyle="bold"
         app:backgroundTint="#8BC34A"
         app:backgroundTintMode="add"
@@ -373,7 +373,7 @@
 
     <Button
         android:id="@+id/minus100"
-        android:layout_width="80dp"
+        android:layout_width="70dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
 
@@ -381,7 +381,7 @@
         android:tag="-100"
         android:text="@string/_m100"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="14sp"
+        android:textSize="12sp"
         android:textStyle="bold"
         app:backgroundTint="#F44336"
         app:backgroundTintMode="add"
@@ -390,14 +390,14 @@
 
     <Button
         android:id="@+id/minus1000"
-        android:layout_width="80dp"
+        android:layout_width="90dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_weight="1"
         android:tag="-1000"
         android:text="@string/_m1000"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="14sp"
+        android:textSize="12sp"
         android:textStyle="bold"
         app:backgroundTint="#F44336"
         app:backgroundTintMode="add"
@@ -422,11 +422,11 @@
 
     <Button
         android:id="@+id/subButton"
-        android:layout_width="80dp"
+        android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_weight="1"
-        android:text="@string/sub"
+        android:text="@string/minus"
         android:textSize="12sp"
         app:backgroundTint="#F44336"
         app:layout_constraintBottom_toBottomOf="@+id/addButton"
@@ -434,7 +434,7 @@
 
     <Button
         android:id="@+id/addButton"
-        android:layout_width="90dp"
+        android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="18dp"
         android:layout_weight="1"

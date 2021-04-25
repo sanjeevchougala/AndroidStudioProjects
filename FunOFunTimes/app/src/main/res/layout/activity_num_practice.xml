@@ -14,6 +14,7 @@
         android:layout_marginTop="8dp"
         android:shadowColor="@color/black"
         android:text="@string/home"
+        android:textSize="12sp"
         app:backgroundTint="#3F51B5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,11 +23,12 @@
         android:id="@+id/rollButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:text="@string/get_a_number"
+        android:textSize="12sp"
         app:backgroundTint="#8BC34A"
         app:layout_constraintBottom_toBottomOf="@id/homeButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/homeButton" />
 
     <ScrollView
         android:layout_width="0dp"
