@@ -5,16 +5,48 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1d7c033-4964-440d-b4e4-6c01bc08d593" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../FunOFunTimes/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="b4f2cc1f-83a5-4a15-bc64-f86fbbd0295f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/funofuntime/chowkabara/ChowkaBaraBoard.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/funofuntime/chowkabara/ChowkaBaraBoard.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/funofuntime/chowkabara/GameActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/funofuntime/chowkabara/GameActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/funofuntime/chowkabara/IconAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/funofuntime/chowkabara/IconAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_game.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_game.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunOFunTimes/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../FunOFunTimes/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunOFunTimes/app/src/main/java/com/funofuntime/funofuntimes/TicTacToe.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../FunOFunTimes/app/src/main/java/com/funofuntime/funofuntimes/TicTacToe.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunOFunTimes/app/src/main/res/layout/activity_addsub.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FunOFunTimes/app/src/main/res/layout/activity_addsub.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunOFunTimes/app/src/main/res/layout/activity_alphabet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FunOFunTimes/app/src/main/res/layout/activity_alphabet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunOFunTimes/app/src/main/res/layout/activity_alphabets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FunOFunTimes/app/src/main/res/layout/activity_alphabets.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunOFunTimes/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FunOFunTimes/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_2_API_30]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Phone]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -24,6 +56,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="valueResourceFile" />
         <option value="layoutResourceFile" />
       </list>
     </option>
@@ -31,21 +64,104 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1rUVSM8lUo10DyzRuPauKj3rO5i" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1rUbEoyUls3JEjz8QW1mtProl7q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android-custom-view/Users/n0158567/Library/Android/sdk/sources/android-30/android/widget/ImageView.java_SELECTED" value="ImageView" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="multi-representation-preview/Users/n0158567/Library/Android/sdk/sources/android-30/android/widget/ImageView.java_selected" value="Custom views" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-mdpi" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
+    </key>
+    <key name="android.template.2084930075">
+      <recent name="com.funofuntime.chowkabara" />
+    </key>
+    <key name="android.template.1905292351">
+      <recent name="com.funofuntime.chowkabara" />
+    </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="com.funofuntime.chowkabara" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android App.MainActivity">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainActivity" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="Chowkabara.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="specific_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="com.funofuntime.chowkabara.MainActivity" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -107,44 +223,154 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ChowkaBaraBoardKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="Chowkabara.app" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.funofuntime.chowkabara.ChowkaBaraBoardKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StartNewGameKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="Chowkabara.app" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.funofuntime.chowkabara.StartNewGameKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Android App.MainActivity" />
+        <item itemvalue="Application.StartNewGameKt" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d1d7c033-4964-440d-b4e4-6c01bc08d593" name="Default Changelist" comment="" />
-      <created>1619030653692</created>
+      <changelist id="b4f2cc1f-83a5-4a15-bc64-f86fbbd0295f" name="Default Changelist" comment="" />
+      <created>1619033506528</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1619030653692</updated>
+      <updated>1619033506528</updated>
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="451" y="278" key="AndroidCreateResourceFileDialog" timestamp="1619032729831">
+    <state x="513" y="59" key="#com.intellij.ide.util.MemberChooser" timestamp="1619050501940">
+      <screen x="53" y="23" width="1627" height="1027" />
+    </state>
+    <state x="513" y="59" key="#com.intellij.ide.util.MemberChooser/53.23.1627.1027@53.23.1627.1027" timestamp="1619050501940" />
+    <state x="408" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619122307337">
       <screen x="51" y="23" width="1629" height="1027" />
     </state>
-    <state x="451" y="278" key="AndroidCreateResourceFileDialog/51.23.1629.1027/1680.23.1920.1057@51.23.1629.1027" timestamp="1619032729831" />
-    <state x="616" y="181" key="AndroidCreateXmlResourceDialog" timestamp="1619032917493">
+    <state x="408" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/51.23.1629.1027@51.23.1629.1027" timestamp="1619122307337" />
+    <state x="161" y="123" width="1419" height="827" key="AVDManager" timestamp="1619193776338">
       <screen x="51" y="23" width="1629" height="1027" />
     </state>
-    <state x="616" y="181" key="AndroidCreateXmlResourceDialog/51.23.1629.1027/1680.23.1920.1057@51.23.1629.1027" timestamp="1619032917493" />
-    <state width="1541" height="241" key="GridCell.Tab.0.bottom" timestamp="1619033206767">
+    <state x="161" y="123" width="1419" height="827" key="AVDManager/51.23.1629.1027@51.23.1629.1027" timestamp="1619193776338" />
+    <state x="165" y="123" width="1415" height="827" key="AVDManager/55.23.1625.1027@55.23.1625.1027" timestamp="1619132133549" />
+    <state x="-1407" y="32" key="AndroidCreateResourceFileDialog" timestamp="1619281012877">
+      <screen x="-1856" y="-230" width="1856" height="1057" />
+    </state>
+    <state x="-1407" y="32" key="AndroidCreateResourceFileDialog/0.23.1680.1027/-1856.-230.1856.1057@-1856.-230.1856.1057" timestamp="1619281012877" />
+    <state x="445" y="278" key="AndroidCreateResourceFileDialog/51.23.1629.1027@51.23.1629.1027" timestamp="1619123359066" />
+    <state x="-1214" y="-67" key="AndroidCreateXmlResourceDialog" timestamp="1619283284497">
+      <screen x="-1859" y="-230" width="1859" height="1057" />
+    </state>
+    <state x="-1214" y="-67" key="AndroidCreateXmlResourceDialog/0.23.1680.1027/-1859.-230.1859.1057@-1859.-230.1859.1057" timestamp="1619283284497" />
+    <state x="616" y="181" key="AndroidCreateXmlResourceDialog/51.23.1629.1027/1680.23.1920.1057@51.23.1629.1027" timestamp="1619034083908" />
+    <state x="616" y="181" key="AndroidCreateXmlResourceDialog/51.23.1629.1027@51.23.1629.1027" timestamp="1619125456735" />
+    <state width="1778" height="470" key="GridCell.Tab.0.bottom" timestamp="1619480087134">
+      <screen x="-1851" y="-230" width="1851" height="1057" />
+    </state>
+    <state width="1778" height="470" key="GridCell.Tab.0.bottom/0.23.1680.1027/-1851.-230.1851.1057@-1851.-230.1851.1057" timestamp="1619480087134" />
+    <state width="1778" height="250" key="GridCell.Tab.0.bottom/0.23.1680.1027/-1854.-230.1854.1057@-1854.-230.1854.1057" timestamp="1619477471742" />
+    <state width="1781" height="443" key="GridCell.Tab.0.bottom/0.23.1680.1027/-1859.-230.1859.1057@-1859.-230.1859.1057" timestamp="1619289926164" />
+    <state width="1842" height="250" key="GridCell.Tab.0.bottom/1680.23.1920.1057/68.23.1612.1027@1680.23.1920.1057" timestamp="1619279915197" />
+    <state width="1551" height="241" key="GridCell.Tab.0.bottom/51.23.1629.1027/1680.23.1920.1057@51.23.1629.1027" timestamp="1619039740316" />
+    <state width="1537" height="241" key="GridCell.Tab.0.bottom/51.23.1629.1027@51.23.1629.1027" timestamp="1619213067494" />
+    <state width="1537" height="425" key="GridCell.Tab.0.bottom/53.23.1627.1027@53.23.1627.1027" timestamp="1619209354512" />
+    <state width="1537" height="425" key="GridCell.Tab.0.bottom/55.23.1625.1027@55.23.1625.1027" timestamp="1619188590761" />
+    <state width="1537" height="425" key="GridCell.Tab.0.bottom/65.23.1615.1027@65.23.1615.1027" timestamp="1619232691651" />
+    <state width="1778" height="470" key="GridCell.Tab.0.center" timestamp="1619480087133">
+      <screen x="-1851" y="-230" width="1851" height="1057" />
+    </state>
+    <state width="1778" height="470" key="GridCell.Tab.0.center/0.23.1680.1027/-1851.-230.1851.1057@-1851.-230.1851.1057" timestamp="1619480087133" />
+    <state width="1778" height="250" key="GridCell.Tab.0.center/0.23.1680.1027/-1854.-230.1854.1057@-1854.-230.1854.1057" timestamp="1619477471741" />
+    <state width="1781" height="443" key="GridCell.Tab.0.center/0.23.1680.1027/-1859.-230.1859.1057@-1859.-230.1859.1057" timestamp="1619289926163" />
+    <state width="1842" height="250" key="GridCell.Tab.0.center/1680.23.1920.1057/68.23.1612.1027@1680.23.1920.1057" timestamp="1619279915197" />
+    <state width="1551" height="241" key="GridCell.Tab.0.center/51.23.1629.1027/1680.23.1920.1057@51.23.1629.1027" timestamp="1619039740316" />
+    <state width="1537" height="241" key="GridCell.Tab.0.center/51.23.1629.1027@51.23.1629.1027" timestamp="1619213067493" />
+    <state width="1537" height="425" key="GridCell.Tab.0.center/53.23.1627.1027@53.23.1627.1027" timestamp="1619209354511" />
+    <state width="1537" height="425" key="GridCell.Tab.0.center/55.23.1625.1027@55.23.1625.1027" timestamp="1619188590761" />
+    <state width="1537" height="425" key="GridCell.Tab.0.center/65.23.1615.1027@65.23.1615.1027" timestamp="1619232691651" />
+    <state width="1778" height="470" key="GridCell.Tab.0.left" timestamp="1619480087132">
+      <screen x="-1851" y="-230" width="1851" height="1057" />
+    </state>
+    <state width="1778" height="470" key="GridCell.Tab.0.left/0.23.1680.1027/-1851.-230.1851.1057@-1851.-230.1851.1057" timestamp="1619480087132" />
+    <state width="1778" height="250" key="GridCell.Tab.0.left/0.23.1680.1027/-1854.-230.1854.1057@-1854.-230.1854.1057" timestamp="1619477471741" />
+    <state width="1781" height="443" key="GridCell.Tab.0.left/0.23.1680.1027/-1859.-230.1859.1057@-1859.-230.1859.1057" timestamp="1619289926163" />
+    <state width="1842" height="250" key="GridCell.Tab.0.left/1680.23.1920.1057/68.23.1612.1027@1680.23.1920.1057" timestamp="1619279915196" />
+    <state width="1551" height="241" key="GridCell.Tab.0.left/51.23.1629.1027/1680.23.1920.1057@51.23.1629.1027" timestamp="1619039740315" />
+    <state width="1537" height="241" key="GridCell.Tab.0.left/51.23.1629.1027@51.23.1629.1027" timestamp="1619213067493" />
+    <state width="1537" height="425" key="GridCell.Tab.0.left/53.23.1627.1027@53.23.1627.1027" timestamp="1619209354510" />
+    <state width="1537" height="425" key="GridCell.Tab.0.left/55.23.1625.1027@55.23.1625.1027" timestamp="1619188590760" />
+    <state width="1537" height="425" key="GridCell.Tab.0.left/65.23.1615.1027@65.23.1615.1027" timestamp="1619232691651" />
+    <state width="1778" height="470" key="GridCell.Tab.0.right" timestamp="1619480087133">
+      <screen x="-1851" y="-230" width="1851" height="1057" />
+    </state>
+    <state width="1778" height="470" key="GridCell.Tab.0.right/0.23.1680.1027/-1851.-230.1851.1057@-1851.-230.1851.1057" timestamp="1619480087133" />
+    <state width="1778" height="250" key="GridCell.Tab.0.right/0.23.1680.1027/-1854.-230.1854.1057@-1854.-230.1854.1057" timestamp="1619477471741" />
+    <state width="1781" height="443" key="GridCell.Tab.0.right/0.23.1680.1027/-1859.-230.1859.1057@-1859.-230.1859.1057" timestamp="1619289926164" />
+    <state width="1842" height="250" key="GridCell.Tab.0.right/1680.23.1920.1057/68.23.1612.1027@1680.23.1920.1057" timestamp="1619279915197" />
+    <state width="1551" height="241" key="GridCell.Tab.0.right/51.23.1629.1027/1680.23.1920.1057@51.23.1629.1027" timestamp="1619039740316" />
+    <state width="1537" height="241" key="GridCell.Tab.0.right/51.23.1629.1027@51.23.1629.1027" timestamp="1619213067493" />
+    <state width="1537" height="425" key="GridCell.Tab.0.right/53.23.1627.1027@53.23.1627.1027" timestamp="1619209354511" />
+    <state width="1537" height="425" key="GridCell.Tab.0.right/55.23.1625.1027@55.23.1625.1027" timestamp="1619188590761" />
+    <state width="1537" height="425" key="GridCell.Tab.0.right/65.23.1615.1027@65.23.1615.1027" timestamp="1619232691651" />
+    <state x="-1281" y="42" key="chooseDestDirectoryDialog" timestamp="1619286736379">
+      <screen x="-1859" y="-230" width="1859" height="1057" />
+    </state>
+    <state x="-1281" y="42" key="chooseDestDirectoryDialog/0.23.1680.1027/-1859.-230.1859.1057@-1859.-230.1859.1057" timestamp="1619286736379" />
+    <state width="1050" height="749" key="javadoc.popup" timestamp="1619110293606">
       <screen x="51" y="23" width="1629" height="1027" />
     </state>
-    <state width="1541" height="241" key="GridCell.Tab.0.bottom/51.23.1629.1027/1680.23.1920.1057@51.23.1629.1027" timestamp="1619033206767" />
-    <state width="1541" height="241" key="GridCell.Tab.0.center" timestamp="1619033206766">
-      <screen x="51" y="23" width="1629" height="1027" />
+    <state width="1050" height="749" key="javadoc.popup/51.23.1629.1027@51.23.1629.1027" timestamp="1619110293606" />
+    <state x="286" y="237" key="run.anything.popup" timestamp="1619131915617">
+      <screen x="55" y="23" width="1625" height="1027" />
     </state>
-    <state width="1541" height="241" key="GridCell.Tab.0.center/51.23.1629.1027/1680.23.1920.1057@51.23.1629.1027" timestamp="1619033206766" />
-    <state width="1541" height="241" key="GridCell.Tab.0.left" timestamp="1619033206766">
-      <screen x="51" y="23" width="1629" height="1027" />
+    <state x="286" y="237" key="run.anything.popup/55.23.1625.1027@55.23.1625.1027" timestamp="1619131915617" />
+    <state x="281" y="23" width="1173" height="1027" key="search.everywhere.popup" timestamp="1619145297781">
+      <screen x="55" y="23" width="1625" height="1027" />
     </state>
-    <state width="1541" height="241" key="GridCell.Tab.0.left/51.23.1629.1027/1680.23.1920.1057@51.23.1629.1027" timestamp="1619033206766" />
-    <state width="1541" height="241" key="GridCell.Tab.0.right" timestamp="1619033206767">
-      <screen x="51" y="23" width="1629" height="1027" />
-    </state>
-    <state width="1541" height="241" key="GridCell.Tab.0.right/51.23.1629.1027/1680.23.1920.1057@51.23.1629.1027" timestamp="1619033206767" />
+    <state x="278" y="23" width="1175" height="1027" key="search.everywhere.popup/51.23.1629.1027@51.23.1629.1027" timestamp="1619119152572" />
+    <state x="280" y="23" width="1173" height="1027" key="search.everywhere.popup/53.23.1627.1027@53.23.1627.1027" timestamp="1619049064399" />
+    <state x="281" y="23" width="1173" height="1027" key="search.everywhere.popup/55.23.1625.1027@55.23.1625.1027" timestamp="1619145297781" />
   </component>
 </project>
