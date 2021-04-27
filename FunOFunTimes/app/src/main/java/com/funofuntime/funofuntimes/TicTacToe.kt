@@ -14,7 +14,7 @@ class TicTacToe : AppCompatActivity() {
     var counter = 1
     var player1Symbol = "🍎"
     var player2Symbol = "🍐"
-    var ticTacToeArray = arrayListOf("TTT", "", "", "", "", "", "", "", "","")
+    var ticTacToeArray = arrayListOf("TTT", "1", "2", "3", "4", "5", "6", "7", "8","9")
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -82,32 +82,33 @@ class TicTacToe : AppCompatActivity() {
             return ticTacToeArray[1]
         }
 
-        if(ticTacToeArray[4] == ticTacToeArray[5] &&  ticTacToeArray[4]==ticTacToeArray[6]){
-            return ticTacToeArray[4]
-        }
-
-        if(ticTacToeArray[7] == ticTacToeArray[8] &&  ticTacToeArray[7]==ticTacToeArray[9]){
-            return ticTacToeArray[7]
-        }
-
         if(ticTacToeArray[1] == ticTacToeArray[4] &&  ticTacToeArray[1]==ticTacToeArray[7]){
             return ticTacToeArray[1]
-        }
-
-        if(ticTacToeArray[2] == ticTacToeArray[5] &&  ticTacToeArray[2]==ticTacToeArray[8]){
-            return ticTacToeArray[2]
-        }
-
-        if(ticTacToeArray[3] == ticTacToeArray[6] &&  ticTacToeArray[3]==ticTacToeArray[9]){
-            return ticTacToeArray[3]
         }
 
         if(ticTacToeArray[1] == ticTacToeArray[5] &&  ticTacToeArray[1]==ticTacToeArray[9]){
             return ticTacToeArray[1]
         }
 
-        if(ticTacToeArray[3] == ticTacToeArray[5] &&  ticTacToeArray[3]==ticTacToeArray[7]){
+        if(ticTacToeArray[4] == ticTacToeArray[5] &&  ticTacToeArray[4]==ticTacToeArray[6]){
+           return ticTacToeArray[4]
+        }
+
+        if(ticTacToeArray[7] == ticTacToeArray[8] &&  ticTacToeArray[7]==ticTacToeArray[9]){
+            return ticTacToeArray[7]
+        }
+
+
+
+        if(ticTacToeArray[2] == ticTacToeArray[5] &&  ticTacToeArray[2]==ticTacToeArray[8]){
+           return ticTacToeArray[2]
+        }
+
+        if(ticTacToeArray[3] == ticTacToeArray[6] &&  ticTacToeArray[3]==ticTacToeArray[9]){
             return ticTacToeArray[3]
+        }
+        if(ticTacToeArray[3] == ticTacToeArray[5] &&  ticTacToeArray[3]==ticTacToeArray[7]){
+           return ticTacToeArray[3]
         }
         return ""
     }
@@ -115,20 +116,20 @@ class TicTacToe : AppCompatActivity() {
     fun  updateTheBoard(btn : Button){
         btn.isClickable = false
         var btnid = btn.tag.toString().toInt()
-        if(counter%2==0) {
+        var isItGame = ""
+                if(counter%2==0) {
             btn.text = player2Symbol
             findViewById<TextView>(R.id.ticTacToeHeadertextView).text = "Now " + findViewById<TextView>(R.id.player1Name).text.toString() + "'s Turn"
         }  else {
             btn.text = player1Symbol
             findViewById<TextView>(R.id.ticTacToeHeadertextView).text =  "Now " + findViewById<TextView>(R.id.player2Name).text.toString() + "'s Turn"
-
         }
         ticTacToeArray[btnid] = btn.text.toString()
 
         counter += 1
 
         if(counter>3){
-            var isItGame = isGame()
+            isItGame = isGame()
             if(isItGame == player1Symbol){
                 alertPopUp("WELL DONE",findViewById<TextView>(R.id.player1Name).text.toString() + " you WON!!")
                 findViewById<Button>(R.id.playAgainButton).visibility = View.VISIBLE
@@ -164,27 +165,27 @@ class TicTacToe : AppCompatActivity() {
 
     fun  setTheBoard(){
         counter = 1
-        ticTacToeArray = arrayListOf("TTT", "", "", "", "", "", "", "", "","")
+        ticTacToeArray = arrayListOf("TTT", "1", "2", "3", "4", "5", "6", "7", "8","9")
         findViewById<TableLayout>(R.id.ticTacToeTableLayout).visibility = View.INVISIBLE
         findViewById<Button>(R.id.startGameButton).visibility = View.VISIBLE
         findViewById<Button>(R.id.oneButton).isClickable = true
-        findViewById<Button>(R.id.oneButton).text = "1"
+        findViewById<Button>(R.id.oneButton).text = ticTacToeArray[1]
         findViewById<Button>(R.id.twoButton).isClickable = true
-        findViewById<Button>(R.id.twoButton).text = "2"
+        findViewById<Button>(R.id.twoButton).text = ticTacToeArray[2]
         findViewById<Button>(R.id.threeButton).isClickable = true
-        findViewById<Button>(R.id.threeButton).text = "3"
+        findViewById<Button>(R.id.threeButton).text = ticTacToeArray[3]
         findViewById<Button>(R.id.fourButton).isClickable = true
-        findViewById<Button>(R.id.fourButton).text = "4"
+        findViewById<Button>(R.id.fourButton).text = ticTacToeArray[4]
         findViewById<Button>(R.id.fiveButton).isClickable = true
-        findViewById<Button>(R.id.fiveButton).text = "5"
+        findViewById<Button>(R.id.fiveButton).text = ticTacToeArray[5]
         findViewById<Button>(R.id.sixButton).isClickable = true
-        findViewById<Button>(R.id.sixButton).text = "6"
+        findViewById<Button>(R.id.sixButton).text = ticTacToeArray[6]
         findViewById<Button>(R.id.sevenButton).isClickable = true
-        findViewById<Button>(R.id.sevenButton).text = "7"
+        findViewById<Button>(R.id.sevenButton).text = ticTacToeArray[7]
         findViewById<Button>(R.id.eightButton).isClickable = true
-        findViewById<Button>(R.id.eightButton).text = "8"
+        findViewById<Button>(R.id.eightButton).text = ticTacToeArray[8]
         findViewById<Button>(R.id.nineButton).isClickable = true
-        findViewById<Button>(R.id.nineButton).text = "9"
+        findViewById<Button>(R.id.nineButton).text = ticTacToeArray[9]
         findViewById<Button>(R.id.playAgainButton).visibility = View.INVISIBLE
     }
 

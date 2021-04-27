@@ -2,12 +2,18 @@ package com.funofuntime.chowkabara
 
 object ChowkaBaraBoard {
     val board : Array<Array<ArrayList<String>>> = arrayOf(arrayOf(arrayListOf()),arrayOf(arrayListOf()),arrayOf(arrayListOf()),arrayOf(arrayListOf()),arrayOf(arrayListOf()))
-    val player1BtnsPath = arrayOf("12","11","21","31","41","51","52","53","54","55","45","35","25","15","14","24","34","44","43","42","32","22","23","33")
-    val player2BtnsPath = arrayOf("41","51","52","53","54","55","45","35","25","15","14","13","12","11","21","22","23","24","34","44","43","42","22","33")
-    val player3BtnsPath = arrayOf("54","55","45","35","25","15","14","13","12","11","21","31","41","51","52","42","32","22","23","24","34","44","43","33")
-    val player4BtnsPath = arrayOf("25","15","14","13","12","11","21","31","41","51","52","53","54","55","45","44","43","42","32","22","23","24","34","33")
+    val player1BtnsPath = arrayOf("13","12","11","21","31","41","51","52","53","54","55","45","35","25","15","14","24","34","44","43","42","32","22","23","33")
+    val player2BtnsPath = arrayOf("31","41","51","52","53","54","55","45","35","25","15","14","13","12","11","21","22","23","24","34","44","43","42","22","33")
+    val player3BtnsPath = arrayOf("53","54","55","45","35","25","15","14","13","12","11","21","31","41","51","52","42","32","22","23","24","34","44","43","33")
+    val player4BtnsPath = arrayOf("35","25","15","14","13","12","11","21","31","41","51","52","53","54","55","45","44","43","42","32","22","23","24","34","33")
+    var btnPath = mutableMapOf("1" to player1BtnsPath, "2" to player2BtnsPath, "3" to player3BtnsPath, "4" to player4BtnsPath)
     var players : ArrayList<Player> = arrayListOf()
+    var currentPlayer :Int = 0
+    var diceRolled = false
+    var diceValue = 0
     val homeCells :ArrayList<String> = arrayListOf("cell33","cell13","cell31","cell53","cell35")
+    var innerCells = arrayOf("24","34","44","43","42","32","22","23","33")
+
     val cells = mutableMapOf(
             "cell11" to ArrayList<Icon>(),
             "cell12" to ArrayList<Icon>(),
@@ -36,6 +42,9 @@ object ChowkaBaraBoard {
             "cell55" to ArrayList<Icon>())
 
     fun clearBoard(){
+        currentPlayer = 0
+        diceRolled = false
+        diceValue = 0
         cells["cell11"]?.clear()
         cells["cell12"]?.clear()
         cells["cell13"]?.clear()
