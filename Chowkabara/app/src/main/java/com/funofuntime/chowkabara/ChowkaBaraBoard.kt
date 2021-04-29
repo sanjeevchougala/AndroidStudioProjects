@@ -3,7 +3,7 @@ package com.funofuntime.chowkabara
 object ChowkaBaraBoard {
     val board : Array<Array<ArrayList<String>>> = arrayOf(arrayOf(arrayListOf()),arrayOf(arrayListOf()),arrayOf(arrayListOf()),arrayOf(arrayListOf()),arrayOf(arrayListOf()))
     val player1BtnsPath = arrayOf("13","12","11","21","31","41","51","52","53","54","55","45","35","25","15","14","24","34","44","43","42","32","22","23","33")
-    val player2BtnsPath = arrayOf("31","41","51","52","53","54","55","45","35","25","15","14","13","12","11","21","22","23","24","34","44","43","42","22","33")
+    val player2BtnsPath = arrayOf("31","41","51","52","53","54","55","45","35","25","15","14","13","12","11","21","22","23","24","34","44","43","42","32","33")
     val player3BtnsPath = arrayOf("53","54","55","45","35","25","15","14","13","12","11","21","31","41","51","52","42","32","22","23","24","34","44","43","33")
     val player4BtnsPath = arrayOf("35","25","15","14","13","12","11","21","31","41","51","52","53","54","55","45","44","43","42","32","22","23","24","34","33")
     var btnPath = mutableMapOf("1" to player1BtnsPath, "2" to player2BtnsPath, "3" to player3BtnsPath, "4" to player4BtnsPath)

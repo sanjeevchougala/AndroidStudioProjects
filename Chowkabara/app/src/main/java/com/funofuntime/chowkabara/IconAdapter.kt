@@ -27,7 +27,8 @@ class IconAdapter(val icons: ArrayList<Icon>) :
                     (view.context as GameActivity).messagePopUp("Alert", " Roll the dice first to move your icon")
                     return
                 }
-                (view.context as GameActivity).updateBoard(icon, adapterPosition)
+                //(view.context as GameActivity).updateBoard(icon, adapterPosition)
+            (view.context as GameActivity).updateBoard(icon, layoutPosition)
             }
 
     }

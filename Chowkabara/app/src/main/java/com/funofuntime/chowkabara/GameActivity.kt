@@ -1,8 +1,10 @@
 package com.funofuntime.chowkabara
 
+import android.accounts.Account
 import android.app.AlertDialog
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
-import android.os.SystemClock.sleep
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.LinearInterpolator
@@ -12,6 +14,9 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import java.lang.reflect.Type
 import kotlin.random.Random
 
 
@@ -27,9 +32,11 @@ class GameActivity : AppCompatActivity() {
 
         ChowkaBaraBoard.players.forEach(){
             if(it.playing) {
-                cellId = it.icons[0].cellId
-                resID = resources.getIdentifier(cellId, "id", packageName)
-                ChowkaBaraBoard.cells[cellId]?.let { it1 -> loadIcons(it1, resID) }
+                it.icons.forEach(){ icon: Icon ->
+                    cellId = icon.cellId
+                    resID = resources.getIdentifier(cellId, "id", packageName)
+                    ChowkaBaraBoard.cells[cellId]?.let { it1 -> loadIcons(it1, resID) }
+                }
                 if(ChowkaBaraBoard.currentPlayer == 0){
                     ChowkaBaraBoard.currentPlayer = it.id
                 }
@@ -38,7 +45,6 @@ class GameActivity : AppCompatActivity() {
 
         var rollDice = findViewById<Button>(R.id.diceButton)
         var dice = findViewById<ImageView>(R.id.diceImageView)
-
         dice.visibility = View.INVISIBLE
 
         rollDice.setOnClickListener(){
@@ -110,7 +116,9 @@ class GameActivity : AppCompatActivity() {
             dice.visibility = View.INVISIBLE
         }
 
-
+        findViewById<Button>(R.id.startNewGameButton).setOnClickListener(){
+            finish()
+        }
     }
 
     override fun onResume() {
@@ -125,7 +133,7 @@ class GameActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
     }
 
-    fun messagePopUp(title : String, message :String){
+    fun messagePopUp(title: String, message: String){
         val dialog: AlertDialog.Builder = AlertDialog.Builder(this)
         dialog.setMessage(message)
         dialog.setTitle(title)
@@ -134,94 +142,149 @@ class GameActivity : AppCompatActivity() {
     }
 
     fun setNextPlayer() {
-        ChowkaBaraBoard.players.filter { player : Player -> player.id != ChowkaBaraBoard.currentPlayer}.forEach(){
-            if (ChowkaBaraBoard.currentPlayer == 4) {
-                if(it.playing) {
-                    ChowkaBaraBoard.currentPlayer = it.id
-                    return
+        var prefs = getSharedPreferences(getString(R.string.SHARED_PREF_NAME), Context.MODE_PRIVATE)
+        val prefsEditor: SharedPreferences.Editor = prefs.edit()
+
+        val gson = Gson()
+        val payersJson = gson.toJson(ChowkaBaraBoard.players)
+        prefsEditor.putString(getString(R.string.CURRENT_PLAYERS_STATUS), payersJson)
+
+        var pId : Int = 0
+        //println("next player: ")
+        ChowkaBaraBoard.players.forEach(){
+            if(!it.completedtheGame){
+                //println("checking next player: ${it.id} ${it.name} playing: ${it.playing}")
+                if(it.playing  ) {
+                    if (it.id > ChowkaBaraBoard.currentPlayer) {
+                        ChowkaBaraBoard.currentPlayer = it.id
+                        prefsEditor.putString(getString(R.string.LAST_PLAYED_PLAYERID), ChowkaBaraBoard.currentPlayer.toString())
+                        prefsEditor.apply()
+                        return
+                    }
+                    if(pId == 0 && it.id != ChowkaBaraBoard.currentPlayer){
+                        pId = it.id
+                       // println("pId: $pId")
+                    }
                 }
-            } else {
-                if(it.id > ChowkaBaraBoard.currentPlayer) {
-                    ChowkaBaraBoard.currentPlayer = it.id
-                    return
+                if (it.id == 4) {
+                    //println("it 4 : ${it.playing}")
+                    if(it.playing && it.id != ChowkaBaraBoard.currentPlayer) {
+                        ChowkaBaraBoard.currentPlayer = it.id
+                        prefsEditor.putString(getString(R.string.LAST_PLAYED_PLAYERID), ChowkaBaraBoard.currentPlayer.toString())
+                        prefsEditor.apply()
+                        return
+                    } else if(pId!=0){
+                        //println("inside 4 returning p : $pId")
+                        ChowkaBaraBoard.currentPlayer = pId
+                        prefsEditor.putString(getString(R.string.LAST_PLAYED_PLAYERID), ChowkaBaraBoard.currentPlayer.toString())
+                        prefsEditor.apply()
+                        return
+                    }
                 }
             }
-
         }
+        prefsEditor.putString(getString(R.string.LAST_PLAYED_PLAYERID), ChowkaBaraBoard.currentPlayer.toString())
+        prefsEditor.apply()
         messagePopUp("Info", "Looks like all other players have moved their icons to cell33. Game Over!")
-
+        findViewById<Button>(R.id.startNewGameButton).visibility = View.VISIBLE
+        findViewById<Button>(R.id.diceButton).visibility = View.INVISIBLE
+        return
     }
     fun updateBoard(icon: Icon, adapterPosition: Int){
-        println("Clicked icon is : ${icon.icon}")
-        println("Clicked icon's tag is : ${icon.iconTag}")
-        println("Clicked icon is in cell  : ${icon.cellId}")
-        println("current played ID is  : ${ChowkaBaraBoard.currentPlayer}")
+//        println("Clicked icon is : ${icon.icon}")
+//        println("Clicked icon's tag is : ${icon.iconTag}")
+//        println("Clicked icon is in cell  : ${icon.cellId}")
+//        println("current played ID is  : ${ChowkaBaraBoard.currentPlayer}")
         var recyclerView = findViewById<RecyclerView>(resources.getIdentifier(icon.cellId, "id", packageName))
 
-        ChowkaBaraBoard.players.map { player : Player ->
-             if(player.id ==  ChowkaBaraBoard.currentPlayer) {
-                 println("inside matching : ${player.name} and id is ${player.id}")
-                 if (player.icons[0]?.icon == icon.icon) {
-                     if(moveIcon(player, icon, adapterPosition)){
-                         recyclerView.adapter?.notifyItemRemoved(adapterPosition)
-                         setNextPlayer()
-                         ChowkaBaraBoard.diceRolled = false
-                         ChowkaBaraBoard.diceValue = 0
-                         findViewById<Button>(R.id.diceButton).visibility = View.VISIBLE
-                         findViewById<Button>(R.id.passTurnButton).visibility = View.INVISIBLE
-                         findViewById<ImageView>(R.id.diceImageView).visibility = View.INVISIBLE
-                         return
-                     }
-                 } else {
-                     messagePopUp("Alert", "Only allowed to click ${player.name}'s icon : ${player.icons[0]?.icon}. If not able to move any icons pass the turn to next player")
-                     findViewById<Button>(R.id.passTurnButton).visibility = View.VISIBLE
-                 }
-                 return
-             }
+        ChowkaBaraBoard.players.map { player: Player ->
+            if(player.id ==  ChowkaBaraBoard.currentPlayer) {
+                //println("inside matching : ${player.name} and id is ${player.id}")
+                if (player.icons[0]?.icon == icon.icon) {
+                    if(moveIcon(player, icon, adapterPosition)){
+                        recyclerView.adapter?.notifyDataSetChanged() //notifyItemRemoved(adapterPosition)
+                        setNextPlayer()
+                        ChowkaBaraBoard.diceRolled = false
+                        ChowkaBaraBoard.diceValue = 0
+                        findViewById<Button>(R.id.diceButton).visibility = View.VISIBLE
+                        findViewById<Button>(R.id.passTurnButton).visibility = View.INVISIBLE
+                        findViewById<ImageView>(R.id.diceImageView).visibility = View.INVISIBLE
+                        return
+                    }
+                    findViewById<Button>(R.id.passTurnButton).visibility = View.VISIBLE
+                } else {
+                    messagePopUp("Alert", "Only allowed to click ${player.name}'s icon : ${player.icons[0]?.icon}. If not able to move any icons pass the turn to next player")
+                    findViewById<Button>(R.id.passTurnButton).visibility = View.VISIBLE
+                }
+                return
+            }
         }
     }
 
-    fun  moveIcon(player : Player, icon : Icon, adapterPosition : Int) : Boolean {
+    fun  moveIcon(player: Player, icon: Icon, adapterPosition: Int) : Boolean {
         var cellIdNum = icon.cellId.substring(4)
 
-        println("cellIdNum : $cellIdNum")
+        //println("cellIdNum : $cellIdNum")
         var currentPosInBtnPath = ChowkaBaraBoard.btnPath[player.id.toString()]?.indexOf(cellIdNum)
-        println("currentPosinBtnPath :$currentPosInBtnPath")
+        //println("currentPosinBtnPath :$currentPosInBtnPath")
         var destinationCellId = ChowkaBaraBoard.diceValue.toInt() + currentPosInBtnPath!!
+        //println("destinationCellId position :$destinationCellId")
+
+        if(destinationCellId > 24){
+            messagePopUp("Alert", "Cannot move the selected icon, try moving other icon of your's. If not able to move any other icon, pass the turn to next player")
+            return false
+        }
         var destinationCell = "cell" + ChowkaBaraBoard.btnPath[player.id.toString()]?.elementAt(destinationCellId)
         println("destinationCell :$destinationCell")
 
         if(ChowkaBaraBoard.innerCells.contains(destinationCell.substring(4)) && !player.hasPasstoInnerLoop){
-            messagePopUp("Alert", "You do not have pass to enter inner loop yet, try moving another icon of yours. If not able to move any icons pass the turn to next player")
+            messagePopUp("Alert", "You do not have pass to enter the inner loop yet, try moving another icon of yours. If not able to move any other icon, pass the turn to next player")
             findViewById<Button>(R.id.passTurnButton).visibility = View.VISIBLE
             return false
         } else {
             //check if another player's icon is in destination cell (which i snot home cell). if yes then move icon back to corresponding player's home cell
-            println("icons count in :$destinationCell : ${ChowkaBaraBoard.cells[destinationCell]?.count()}")
-            if(!ChowkaBaraBoard.homeCells.contains(destinationCell)  && ChowkaBaraBoard.cells[destinationCell]?.count()!! >0) {
-                println("Inside removing icon loop")
-
+           if(!ChowkaBaraBoard.homeCells.contains(destinationCell)  && ChowkaBaraBoard.cells[destinationCell]?.count()!! >0) {
                 var playerHomeCell = ChowkaBaraBoard.cells[destinationCell]?.elementAt(0)?.homeCell.toString()
                 if(icon.homeCell.compareTo(playerHomeCell) == 0){
-                    messagePopUp("Info", "You already have your own icon in $destinationCell cell, try moving another icon. If not able to move any icons pass the turn to next player")
+                    messagePopUp("Info", "You already have your own icon in $destinationCell cell, try moving another icon. If not able to move any other icon, pass the turn to next player")
                     return false
                 }
-                ChowkaBaraBoard.cells[destinationCell]?.elementAt(0)?.let { ChowkaBaraBoard.cells[playerHomeCell]?.add(it) }
+                ChowkaBaraBoard.cells[destinationCell]?.elementAt(0)?.let {
+                    ChowkaBaraBoard.cells[playerHomeCell]?.add(it)
+                    it.cellId=playerHomeCell
+
+                }
                 ChowkaBaraBoard.cells[destinationCell]?.removeAt(0)
                 var recyclerViewforDestCell = findViewById<RecyclerView>(resources.getIdentifier(destinationCell, "id", packageName))
-                recyclerViewforDestCell.adapter?.notifyItemRemoved(0)
+                recyclerViewforDestCell.adapter?.notifyDataSetChanged() //notifyItemRemoved(0)
                 ChowkaBaraBoard.cells[playerHomeCell]?.let { it1 -> loadIcons(it1, resources.getIdentifier(playerHomeCell, "id", packageName))}
-                player.hasPasstoInnerLoop = true
+               var recyclerViewforplayerHomeCell = findViewById<RecyclerView>(resources.getIdentifier(playerHomeCell, "id", packageName))
+               recyclerViewforplayerHomeCell.adapter?.notifyDataSetChanged()
+               player.hasPasstoInnerLoop = true
             }
-            println("icons count in :$destinationCell before move : ${ChowkaBaraBoard.cells[destinationCell]?.count()}")
-
             ChowkaBaraBoard.cells[destinationCell]?.add(icon)
             ChowkaBaraBoard.cells[destinationCell]?.let { it1 -> loadIcons(it1, resources.getIdentifier(destinationCell, "id", packageName))}
             ChowkaBaraBoard.cells[icon.cellId]?.removeAt(adapterPosition)
+
+            player.icons.forEach(){
+                if(it.iconTag == icon.iconTag) it.cellId = destinationCell
+            }
+
             icon.cellId = destinationCell
+
+            if(destinationCell == "cell33"){
+                checkPlayerCompletedtheGame(player)
+            }
             return true
         }
         return false
     }
 
+    fun checkPlayerCompletedtheGame(player: Player){
+        var iconcInPalace = 0
+        player.icons.forEach(){
+                   if(it.cellId == "cell33") iconcInPalace +=1
+        }
+        if(iconcInPalace==4) player.completedtheGame = true
+    }
 }

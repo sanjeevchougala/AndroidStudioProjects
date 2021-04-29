@@ -1,10 +1,15 @@
 package com.funofuntime.chowkabara
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.funofuntime.chowkabara.ChowkaBaraBoard
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import java.lang.reflect.Type
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,6 +21,27 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, NewGame ::class.java)
             startActivity(intent)
         }
+
+        findViewById<Button>(R.id.resumeGameButton).setOnClickListener(){
+            var prefs = getSharedPreferences(getString(R.string.SHARED_PREF_NAME), Context.MODE_PRIVATE)
+            val gson = Gson()
+            val type: Type = object : TypeToken<List<Player?>?>() {}.type
+            val playersString: String? = prefs.getString(getString(R.string.CURRENT_PLAYERS_STATUS), "")
+
+            ChowkaBaraBoard.clearBoard()
+            ChowkaBaraBoard.currentPlayer = prefs.getString(getString(R.string.LAST_PLAYED_PLAYERID), "")?.toInt() ?: 0
+
+            ChowkaBaraBoard.players.forEach(){
+                if(it.playing) {
+                    it.icons.forEach(){ icon: Icon ->
+                        ChowkaBaraBoard.cells[icon.cellId]?.add(icon)
+                    }
+                }
+            }
+            val intent = Intent(this, GameActivity ::class.java)
+            startActivity(intent)
+        }
+
     }
 
 

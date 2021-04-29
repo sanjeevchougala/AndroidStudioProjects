@@ -67,14 +67,14 @@ class NewGame : AppCompatActivity() {
                 }
 
                 player = Player(i, playername, playerIcon)
-                player.setPlayingTrue()
+
                 if (playername.isEmpty()){
-                    player.setPlayingFalse()
                     playingStatus = "player$i" + "Status"
                     resID = resources.getIdentifier(playingStatus, "id", packageName)
                     findViewById<TextView>(resID).text = "Not Playing.."
                 } else {
-                    player.setPlayingTrue()
+                    player.playing = true
+                    player.completedtheGame = false
                     //add 4 buttons for player
                     player.icons.add(Icon(playerIcon,"p$i"+"1",homeCell,homeCell))
                     player.icons.add(Icon(playerIcon,"p$i"+"2",homeCell,homeCell))
