@@ -11,6 +11,7 @@ import android.view.animation.LinearInterpolator
 import android.view.animation.RotateAnimation
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -39,6 +40,7 @@ class GameActivity : AppCompatActivity() {
                 }
                 if(ChowkaBaraBoard.currentPlayer == 0){
                     ChowkaBaraBoard.currentPlayer = it.id
+                    findViewById<TextView>(R.id.currentPlayerTextView).text = "Current Turn: ${it.name} :: ${it.btnIcon}"
                 }
            }
         }
@@ -157,12 +159,14 @@ class GameActivity : AppCompatActivity() {
                 if(it.playing  ) {
                     if (it.id > ChowkaBaraBoard.currentPlayer) {
                         ChowkaBaraBoard.currentPlayer = it.id
+                        findViewById<TextView>(R.id.currentPlayerTextView).text = "Current Turn: ${it.name} :: ${it.btnIcon}"
                         prefsEditor.putString(getString(R.string.LAST_PLAYED_PLAYERID), ChowkaBaraBoard.currentPlayer.toString())
                         prefsEditor.apply()
                         return
                     }
                     if(pId == 0 && it.id != ChowkaBaraBoard.currentPlayer){
                         pId = it.id
+                        findViewById<TextView>(R.id.currentPlayerTextView).text = "Current Turn: ${it.name} :: ${it.btnIcon}"
                        // println("pId: $pId")
                     }
                 }
@@ -170,6 +174,7 @@ class GameActivity : AppCompatActivity() {
                     //println("it 4 : ${it.playing}")
                     if(it.playing && it.id != ChowkaBaraBoard.currentPlayer) {
                         ChowkaBaraBoard.currentPlayer = it.id
+                        findViewById<TextView>(R.id.currentPlayerTextView).text = "Current Turn: ${it.name} :: ${it.btnIcon}"
                         prefsEditor.putString(getString(R.string.LAST_PLAYED_PLAYERID), ChowkaBaraBoard.currentPlayer.toString())
                         prefsEditor.apply()
                         return
@@ -191,10 +196,6 @@ class GameActivity : AppCompatActivity() {
         return
     }
     fun updateBoard(icon: Icon, adapterPosition: Int){
-//        println("Clicked icon is : ${icon.icon}")
-//        println("Clicked icon's tag is : ${icon.iconTag}")
-//        println("Clicked icon is in cell  : ${icon.cellId}")
-//        println("current played ID is  : ${ChowkaBaraBoard.currentPlayer}")
         var recyclerView = findViewById<RecyclerView>(resources.getIdentifier(icon.cellId, "id", packageName))
 
         ChowkaBaraBoard.players.map { player: Player ->
