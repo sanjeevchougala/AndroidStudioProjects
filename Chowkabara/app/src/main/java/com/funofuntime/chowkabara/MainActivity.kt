@@ -1,12 +1,11 @@
 package com.funofuntime.chowkabara
 
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.funofuntime.chowkabara.ChowkaBaraBoard
+import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.lang.reflect.Type
@@ -18,8 +17,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<Button>(R.id.playNewGameButton).setOnClickListener(){
-            val intent = Intent(this, NewGame ::class.java)
+            val intent = Intent(this, NewGame::class.java)
             startActivity(intent)
+        }
+
+        findViewById<Button>(R.id.howToPlayGameButton).setOnClickListener(){
+            val dialog: AlertDialog.Builder = AlertDialog.Builder(this)
+            dialog.setMessage("Please read app description for rules and game details!")
+            dialog.setTitle("Information:")
+            val alertDialog = dialog.create()
+            alertDialog.show()
         }
 
         findViewById<Button>(R.id.resumeGameButton).setOnClickListener(){
@@ -38,7 +45,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-            val intent = Intent(this, GameActivity ::class.java)
+            val intent = Intent(this, GameActivity::class.java)
             startActivity(intent)
         }
 

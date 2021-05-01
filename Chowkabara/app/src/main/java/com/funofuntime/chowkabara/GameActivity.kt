@@ -38,7 +38,7 @@ class GameActivity : AppCompatActivity() {
                     resID = resources.getIdentifier(cellId, "id", packageName)
                     ChowkaBaraBoard.cells[cellId]?.let { it1 -> loadIcons(it1, resID) }
                 }
-                if(ChowkaBaraBoard.currentPlayer == 0){
+                if(ChowkaBaraBoard.currentPlayer == 0 || ChowkaBaraBoard.currentPlayer == it.id){
                     ChowkaBaraBoard.currentPlayer = it.id
                     findViewById<TextView>(R.id.currentPlayerTextView).text = "Current Turn: ${it.name} :: ${it.btnIcon}"
                 }
